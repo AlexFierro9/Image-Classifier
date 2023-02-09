@@ -1,0 +1,2 @@
+Dear Evaluator
+I have not removed saved_model.pth, if you wish to use train.py with default parameters, i suggest removing it
