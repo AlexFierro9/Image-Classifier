@@ -1,14 +1,7 @@
 import numpy as np
-import seaborn as sns
-from torch import nn,optim
-from torchvision import datasets, models, transforms
-import torch.utils.data 
-import pandas as pd
-import matplotlib.pyplot as plt
-import random
+import torch
 import json
 import argparse
-from PIL import Image
 from model_utils import restore_model
 from Transforms import process_image
 def prediction_system(model,processed_image,cat_class,topk,gpu):
@@ -39,8 +32,8 @@ def prediction_system(model,processed_image,cat_class,topk,gpu):
     #note: function returns probablities along with species names
 if __name__ == "__main__":
     args = argparse.ArgumentParser(description = 'Parser for prediction system')
-    args.add_argument('input', default='/home/workspace/ImageClassifier/flowers/test/18/image_04272.jpg', type = str)
-    args.add_argument('checkpoint', default='/home/workspace/ImageClassifier/saved_model.pth',type = str)
+    args.add_argument('--input', default='/home/workspace/ImageClassifier/flowers/test/18/image_04272.jpg', type = str)
+    args.add_argument('--checkpoint', default='/home/workspace/ImageClassifier/saved_model.pth',type = str)
     args.add_argument('--top_k', default=5, dest="top_k", action="store", type=int)
     args.add_argument('--category_classes', dest="category_classes", action="store", default='/home/workspace/ImageClassifier/cat_to_name.json')
     args.add_argument('--gpu', default="gpu", action="store", dest="gpu")

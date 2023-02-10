@@ -1,6 +1,4 @@
-import os 
 from torchvision import datasets,transforms
-import json
 import torch
 from PIL import Image
 
