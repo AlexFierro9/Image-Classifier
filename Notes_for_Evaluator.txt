@@ -1,2 +1,4 @@
 Dear Evaluator
-I have not removed saved_model.pth, if you wish to use train.py with default parameters, i suggest removing it
+1.)I have removed saved_model.pth, if you wish to use train.py with default parameters, i suggest re-running the train.py script first
+2.)Do to issues with bash terminal on udacity workspace, I had to manually upload the Image Classifier's .ipynb file
+3.)This project was completed by me over a period of 3 months, so my variable naming methods may seem quite different at places, rest assured I've Tried my best to comment out the important bits and place explaination at places I find important
